@@ -10,7 +10,7 @@ $def with (scanners, cpu_count, AV_SPEED)
     <div class="header">
         <div class="header-container">
         <div class="branding">
-            <span>MultiAV</span>      
+            <span>Cyseca</span>      
         </div>
         <div class="navigation"> 
             <ul>
@@ -60,7 +60,7 @@ $def with (scanners, cpu_count, AV_SPEED)
             </div>
             <div id="scansettings" style="display:none">
                 <div class="toggle_checkbox" title="If checked, MultiAV uses plugins with internet access in the scan as well.">
-                    <input type="checkbox" name="allowLeak"><span> Allow data leak to vendors</span>
+                    <input type="checkbox" name="allowLeak"  checked="true"> <span> Allow data leak to vendors</span>
                 </div>
                 <div>
                     <span>Min scanner speed</span>
@@ -129,6 +129,9 @@ $def with (scanners, cpu_count, AV_SPEED)
     previewNode.id = "";
     var previewTemplate = previewNode.parentNode.innerHTML;
     previewNode.parentNode.removeChild(previewNode);
+    
+
+    
 
     // Custom upload handler to support base64 encoded file uploads
     var prot = Dropzone.prototype.submitRequest;
@@ -207,20 +210,32 @@ $def with (scanners, cpu_count, AV_SPEED)
                 window.location.href = "/search?id=" + reportIds.join(",");
             }
         },
-        customHandler: function(xhr, formData, files, cb) {
-            let base64_data = files[0].dataURL;
-            base64_data = base64_data.substr(base64_data.search("base64,") + 7);
-            let field = document.querySelector("#scansettings select");
-            let minspeed = field.value;
-            field = document.querySelector("#scansettings input");
-            let allow_internet = field.checked? "true": "false";
 
-            xhr.send(JSON.stringify({
-                "allow_internet": allow_internet,
-                "minspeed": minspeed,
-                "sample_name": files[0].name,
-                "sample": base64_data
-            }));
+        customHandler: function(xhr, formData, files, cb) {
+            //let base64_data = files[0].dataURL;
+
+            var reader = new FileReader();
+            reader.onload = function (e) {
+                let base64_data = e.currentTarget.result;
+                base64_data = base64_data.substr(base64_data.search("base64,") + 7);
+
+                let field = document.querySelector("#scansettings select");
+                let minspeed = field.value;
+                field = document.querySelector("#scansettings input");
+                let allow_internet = field.checked? "true": "false";
+
+                xhr.send(JSON.stringify({
+                    "allow_internet": allow_internet,
+                    "minspeed": minspeed,
+                    "sample_name": files[0].name,
+                    "sample": base64_data
+                }));
+            };
+            reader.readAsDataURL(files[0]);
+            
+
+            /*base64_data = r.readAsDataURL();
+            */
         },
     };
     

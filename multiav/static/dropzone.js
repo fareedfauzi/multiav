@@ -325,7 +325,7 @@ var Dropzone = function (_Emitter) {
         /**
          * Whether hidden files in directories should be ignored.
          */
-        ignoreHiddenFiles: true,
+        ignoreHiddenFiles: false,
 
         /**
          * The default implementation of `accept` checks the file's mime type or

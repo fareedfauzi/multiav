@@ -10,7 +10,7 @@ body {
 
 h1 {
   display: block;
-  background-color:#FF9900;
+  background-color:#3399ff;
   padding: 3px 0 5px 3px;
   color: #333333;
 }
@@ -41,7 +41,7 @@ dd {
   display: flex; 
   width: 100%;
   height: 50px;
-  background-color:#FF9900;
+  background-color:#3399ff;
   justify-content: center;
   align-items: center;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
@@ -53,7 +53,7 @@ dd {
   margin-right: 40px;
   display: flex;
   align-items: center;
-  text-shadow: 1px 1px 2px grey;
+  color: white;
 }
 
 .header .header-container {
@@ -76,7 +76,7 @@ dd {
 
 .navigation h1 {
   display: block; 
-  background-color:#FF9900;
+  background-color:#3399ff;
   font-size: 90%; 
   padding: 3px 0 5px 3px;
   border: 1px solid #000000;
@@ -105,7 +105,7 @@ dd {
   display: block;
   padding: 5px 10px 2px 10px;
   text-decoration: none;
-  color: #666666;
+  color: white;
   width:111px;
 }
 
@@ -118,7 +118,7 @@ dd {
 }
 
 .navigation ul .active {
-  background-color: #d0820e;
+  background-color: #0066cc;
 }
 
 .navigation ul .active a {
@@ -142,7 +142,7 @@ dd {
 
 #scansettings div{    
   float: left;
-  border: 1px solid #ffa500;
+  border: 1px solid #3399ff;
   padding: 6px;
   margin-top: -25px;
   background-color: white;
@@ -164,7 +164,7 @@ dd {
   height: 300px;
   width: 100%;
   z-index: -1;
-  border-bottom: 1px solid orange;
+  border-bottom: 1px solid #3399ff;
   left: 0px;
 }
 
@@ -180,7 +180,7 @@ dd {
   font-size: 12.8;
   margin: 0px;
   width: 100%;
-  background-color: orange;
+  background-color: #3399ff;
   color: #333333;
   padding-left: 10px;
 }
@@ -190,7 +190,7 @@ dd {
 }
 
 #data th {
-  background-color:#FF9900;
+  background-color:#3399ff;
   text-align: left;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
 }
@@ -208,11 +208,11 @@ dd {
 }
 
 #hextable th {
-  background-color:#FF9900;
+  background-color:#3399ff;
 }
 
 .dropzone {
-  border: 1px solid orange !important;
+  border: 1px solid #3399ff !important;
   min-height: 300px !important;
   margin-top: 40px;
 }
@@ -221,7 +221,7 @@ dd {
 }
 
 .button {
-  border: 1px solid orange;
+  border: 1px solid #3399ff;
   background-color: white;
   z-index: 30;
   color: 666666;
@@ -231,7 +231,7 @@ dd {
 }
 .button:hover {
   color:white;
-  background: orange;
+  background: #3399ff;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
 }
 
@@ -296,7 +296,7 @@ dd {
 }
 
 .data-table th {
-  background-color:#FF9900;
+  background-color:#3399ff;
   padding: 3px 10px;
   color: #333333;
   text-align: left;
@@ -308,7 +308,7 @@ dd {
 }
 
 .data-table td {
-  border-bottom: 1px dashed #C39C4E;
+  border-bottom: 1px dashed #b3d9ff;
   padding: 5px 10px;
 }
 
@@ -332,7 +332,7 @@ dd {
   float:left;
   list-style: none;
   padding: 10px 20px;
-  border: 1px solid orange;
+  border: 1px solid #3399ff;
   margin-right: -1px;
   transition: background-color .3s;
   color: #333333;
@@ -406,7 +406,7 @@ dd {
   background: #fff;
   border-radius: 2px;
   border: none;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px orange;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px #3399ff;
   z-index: 3;
   height: 44px;
   width: 100%;
@@ -445,7 +445,7 @@ dd {
 }
 
 .pagination a.active {
-  background-color: #ff9900;
+  background-color: #3399ff;
   color: white;
 }
 
